@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | Lavender Kids International Preschool &amp; Daycare</title>
+  <meta name="description"
+    content="Lavender Kids International Preschool &amp; Daycare is opening soon. Discover holistic learning and register early.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --lav-deep: #3A1F6E;
+      --lav-primary: #7544C8;
+      --lav-light: #B496EE;
+      --lav-tint: #F4ECFF;
+      --lav-bg: #FAF7FE;
+      --amber: #FFAA00;
+      --amber-soft: #FFF5E0;
+      --coral: #FF5277;
+      --dark: #150B26;
+      --text-primary: #291B3E;
+      --text-secondary: #63537D;
+      --text-muted: #8E80A6;
+      --white: #FFFFFF;
+      --border-card: #E3D6F6;
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 24px;
+      --radius-pill: 999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      color: var(--text-primary);
+      background:
+        radial-gradient(circle at 50% 18%, rgba(180, 150, 238, 0.32) 0%, transparent 55%),
+        radial-gradient(circle at 12% 80%, rgba(255, 170, 0, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 88% 75%, rgba(117, 68, 200, 0.16) 0%, transparent 45%),
+        linear-gradient(180deg, #FFFFFF 0%, #FAF7FE 50%, #F4ECFF 100%);
+      font-weight: 600;
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: clamp(10px, 1.8vh, 18px) 16px clamp(32px, 5.8vh, 58px);
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    /* FULLSCREEN FLOATING LAVENDER PETALS CANVAS */
+    #petalsCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* OPEN HERO STAGE (CENTERED, NO SCROLL) */
+    .hero-stage {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 960px;
+      text-align: center;
+      margin: 0 auto;
+      padding: 0 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* BRAND NAME & SUBTITLE */
+    .brand-logo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: clamp(6px, 1.4vh, 14px);
+    }
+
+    .brand-title {
+      font-family: 'Baloo 2', cursive;
+      font-size: clamp(2.4rem, 4.6vw, 3.8rem);
+      font-weight: 800;
+      color: var(--lav-deep);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-tagline {
+      font-size: clamp(0.85rem, 1.4vw, 1.15rem);
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-top: 4px;
+    }
+
+    /* BIG COMING SOON DISPLAY */
+    .coming-soon-wrapper {
+      margin: clamp(10px, 2.2vh, 24px) 0 clamp(8px, 1.6vh, 18px);
+      position: relative;
+    }
+
+    .coming-soon-title {
+      font-family: 'Baloo 2', cursive;
+      font-size: clamp(3.6rem, 8.5vw, 6.4rem);
+      font-weight: 800;
+      line-height: 0.94;
+      background: linear-gradient(135deg, var(--lav-deep) 0%, var(--lav-primary) 50%, var(--amber) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      filter: drop-shadow(0 4px 16px rgba(117, 68, 200, 0.2));
+      position: relative;
+      display: inline-block;
+    }
+
+    .coming-soon-subtitle {
+      font-size: clamp(1rem, 1.7vw, 1.25rem);
+      color: var(--text-primary);
+      margin-top: clamp(8px, 1.4vh, 14px);
+      max-width: 660px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+
+    .highlight-purple {
+      color: var(--lav-primary);
+      font-weight: 700;
+    }
+
+    .highlight-amber {
+      color: var(--amber);
+      font-weight: 700;
+    }
+
+    /* CALL TO ACTION BUTTON */
+    .cta-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-top: clamp(12px, 2vh, 22px);
+    }
+
+    .cta-btn-main {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      max-width: 440px;
+      background: linear-gradient(135deg, var(--lav-primary) 0%, var(--lav-deep) 100%);
+      color: var(--white);
+      font-family: 'Baloo 2', cursive;
+      font-size: clamp(1.08rem, 1.8vw, 1.25rem);
+      font-weight: 700;
+      text-decoration: none;
+      padding: clamp(11px, 1.6vh, 15px) 32px;
+      border-radius: var(--radius-pill);
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(117, 68, 200, 0.35);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-btn-main::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transform: skewX(-25deg);
+      transition: 0.7s;
+    }
+
+    .cta-btn-main:hover::before {
+      left: 140%;
+    }
+
+    .cta-btn-main:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 14px 28px rgba(117, 68, 200, 0.44);
+      background: linear-gradient(135deg, #8352db 0%, #2f175a 100%);
+      color: var(--white);
+    }
+
+    .cta-btn-main:active {
+      transform: translateY(0) scale(0.99);
+    }
+
+    .cta-arrow {
+      transition: transform 0.25s ease;
+    }
+
+    .cta-btn-main:hover .cta-arrow {
+      transform: translateX(5px);
+    }
+
+    .cta-subnote {
+      font-size: clamp(0.72rem, 1.2vw, 0.8rem);
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* CAMPUS CONTACT BOX WITH SPLIT QR (LEFT) & ADDRESS (RIGHT) */
+    .footer-contact-box {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 650px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1.5px solid var(--border-card);
+      border-radius: 18px;
+      padding: clamp(9px, 1.3vh, 14px) 20px clamp(7px, 1.1vh, 11px);
+      margin: 0 auto clamp(18px, 3vh, 32px);
+      box-shadow: 0 6px 24px -4px rgba(58, 31, 110, 0.08);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
+    .footer-hotline {
+      font-size: clamp(0.85rem, 1.5vw, 0.94rem);
+      font-weight: 700;
+      color: var(--lav-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding-bottom: clamp(5px, 0.8vh, 8px);
+      margin-bottom: clamp(6px, 1vh, 10px);
+      border-bottom: 1px solid var(--lav-tint);
+    }
+
+    .footer-hotline a {
+      color: var(--lav-primary);
+      font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+      font-weight: 800;
+      font-family: 'Baloo 2', cursive;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: all 0.2s ease;
+      display: inline-block;
+    }
+
+    .footer-hotline a:hover {
+      color: var(--lav-deep);
+      transform: scale(1.04);
+    }
+
+    /* SPLIT ROW: QR LEFT, ADDRESS RIGHT */
+    .footer-split-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      text-align: left;
+    }
+
+    .footer-qr-col {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .footer-qr-link {
+      display: inline-block;
+      background: var(--white);
+      padding: 5px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-card);
+      box-shadow: 0 2px 8px rgba(58, 31, 110, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .footer-qr-link:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 14px rgba(117, 68, 200, 0.22);
+    }
+
+    .footer-qr-img {
+      width: clamp(54px, 7.5vh, 66px);
+      height: clamp(54px, 7.5vh, 66px);
+      display: block;
+      border-radius: 4px;
+    }
+
+    .footer-qr-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+
+    .footer-qr-label {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.25;
+    }
+
+    .footer-maps-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--lav-primary);
+      color: var(--white) !important;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      text-decoration: none !important;
+      box-shadow: 0 2px 8px rgba(117, 68, 200, 0.22);
+      transition: all 0.2s ease;
+    }
+
+    .footer-maps-btn:hover {
+      background: var(--lav-deep);
+      transform: translateY(-1px);
+    }
+
+    .footer-address-col {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      flex: 1.15;
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      border-left: 1px solid var(--lav-tint);
+      padding-left: 14px;
+    }
+
+    .footer-initiative {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--lav-deep);
+      margin-top: clamp(6px, 0.9vh, 9px);
+      padding-top: clamp(5px, 0.7vh, 7px);
+      border-top: 1px solid var(--lav-tint);
+      text-align: center;
+    }
+
+    .landing-copyright {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      margin-top: 4px;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 640px) {
+
+      html,
+      body {
+        height: 100%;
+        height: 100vh;
+        height: 100dvh;
+        overflow: hidden;
+      }
+
+      body {
+        padding: clamp(10px, 1.6vh, 16px) 14px max(24px, calc(env(safe-area-inset-bottom) + 16px));
+        justify-content: space-between;
+        gap: 0;
+      }
+
+      .hero-stage {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 4px;
+        width: 100%;
+      }
+
+      .brand-logo-container {
+        margin-bottom: clamp(6px, 1.2vh, 12px);
+      }
+
+      .brand-title {
+        font-size: clamp(2rem, 7.8vw, 2.7rem);
+        line-height: 1.05;
+      }
+
+      .brand-tagline {
+        font-size: clamp(0.72rem, 2.4vw, 0.84rem);
+        letter-spacing: 0.12em;
+        margin-top: 2px;
+      }
+
+      .coming-soon-wrapper {
+        margin: clamp(8px, 1.8vh, 16px) 0 clamp(6px, 1.4vh, 14px);
+      }
+
+      .coming-soon-title {
+        font-size: clamp(2.8rem, 11vw, 4.2rem);
+        line-height: 0.94;
+      }
+
+      .coming-soon-subtitle {
+        font-size: clamp(0.88rem, 3.2vw, 1.02rem);
+        line-height: 1.42;
+        padding: 0 4px;
+        margin-top: clamp(6px, 1vh, 10px);
+      }
+
+      .cta-container {
+        width: 100%;
+        margin-top: clamp(10px, 1.8vh, 18px);
+        gap: 6px;
+      }
+
+      .cta-btn-main {
+        width: 100%;
+        max-width: 380px;
+        padding: clamp(11px, 1.6vh, 14px) 24px;
+        font-size: clamp(1.02rem, 3.6vw, 1.15rem);
+      }
+
+      .footer-contact-box {
+        padding: clamp(10px, 1.5vh, 14px) 16px clamp(8px, 1.2vh, 12px);
+        border-radius: 16px;
+        margin: 0 auto clamp(12px, 2.2vh, 18px);
+        width: 100%;
+        box-shadow: 0 4px 18px -2px rgba(58, 31, 110, 0.08);
+      }
+
+      .footer-hotline {
+        flex-wrap: wrap;
+        gap: 4px;
+        font-size: clamp(0.84rem, 2.8vw, 0.92rem);
+        padding-bottom: clamp(6px, 1vh, 8px);
+        margin-bottom: clamp(6px, 1vh, 10px);
+      }
+
+      .footer-hotline a {
+        font-size: clamp(1.2rem, 4vw, 1.35rem);
+      }
+
+      .footer-split-row {
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(8px, 1.2vh, 12px);
+      }
+
+      .footer-qr-col {
+        justify-content: center;
+        width: 100%;
+        gap: 12px;
+      }
+
+      .footer-qr-img {
+        width: clamp(52px, 7vh, 62px);
+        height: clamp(52px, 7vh, 62px);
+      }
+
+      .footer-qr-label {
+        font-size: 0.76rem;
+      }
+
+      .footer-address-col {
+        border-left: none;
+        border-top: 1px solid var(--lav-tint);
+        padding-left: 0;
+        padding-top: clamp(6px, 1vh, 10px);
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        font-size: clamp(0.74rem, 2.4vw, 0.8rem);
+        line-height: 1.38;
+      }
+
+      .footer-initiative {
+        font-size: 0.76rem;
+        margin-top: clamp(6px, 0.9vh, 8px);
+        padding-top: clamp(5px, 0.7vh, 7px);
+      }
+
+      .landing-copyright {
+        font-size: 0.7rem;
+        margin-top: 4px;
+        margin-bottom: 2px;
+      }
+    }
+
+    @media (max-height: 520px) and (max-width: 640px) {
+
+      html,
+      body {
+        overflow-y: auto;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- FULLSCREEN FLOATING LAVENDER PETALS CANVAS -->
+  <canvas id="petalsCanvas"></canvas>
+
+  <!-- MAIN OPEN STAGE (NO CARD) -->
+  <main class="hero-stage">
+
+    <!-- BRAND NAME -->
+    <div class="brand-logo-container">
+      <h1 class="brand-title">Lavender Kids</h1>
+      <p class="brand-tagline">International Preschool &amp; Daycare</p>
+    </div>
+
+    <!-- BIG COMING SOON ANNOUNCEMENT -->
+    <div class="coming-soon-wrapper">
+      <div class="coming-soon-title">Coming Soon</div>
+      <p class="coming-soon-subtitle">
+        A world of <span class="highlight-purple">wonder, joyful curiosity</span>, and holistic learning is blooming for
+        <span class="highlight-amber">little dreamers</span>.
+      </p>
+    </div>
+
+    <!-- CTA BUTTON TO INDEX.HTML -->
+    <div class="cta-container">
+      <a href="index.html" class="cta-btn-main" id="ctaViewIndex">
+        <span>See Pre-Registration &amp; Early Privileges</span>
+        <svg class="cta-arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+      <span class="cta-subnote">Click to register for inaugural fee discounts and priority campus tours</span>
+    </div>
+
+  </main>
+
+  <!-- ================= CAMPUS CONTACT BOX (QR LEFT, ADDRESS RIGHT) ================= -->
+  <footer class="footer-contact-box">
+    <div class="footer-hotline">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--lav-primary)" stroke-width="2.2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+      </svg>
+      <span>Admissions Helpline:</span>
+      <a href="tel:+916364952223">+91 63649 52223</a>
+    </div>
+
+    <div class="footer-split-row">
+      <!-- LEFT: QR CODE -->
+      <div class="footer-qr-col">
+        <a href="https://maps.app.goo.gl/hFzm5kGAwDMjukNg6" target="_blank" rel="noopener noreferrer"
+          class="footer-qr-link" title="Open campus in Google Maps">
+          <img src="./assets/images/maps_qr.png" alt="Google Maps QR Code" class="footer-qr-img">
+        </a>
+        <div class="footer-qr-text">
+          <span class="footer-qr-label">Scan or tap to visit campus on Google Maps</span>
+          <a href="https://maps.app.goo.gl/hFzm5kGAwDMjukNg6" target="_blank" rel="noopener noreferrer"
+            class="footer-maps-btn">
+            <span>Open in Maps</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: CAMPUS ADDRESS -->
+      <div class="footer-address-col">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--lav-primary)" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round" style="margin-top:2px;flex-shrink:0;">
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+          <circle cx="12" cy="10" r="3" />
+        </svg>
+        <span>Ground Floor, Shivagiri Complex, Kaggadasapura Main Rd, near SCT College of Education, Kondappa Layout,
+          Vignan Nagar, Doddanekkundi, Bengaluru, Karnataka 560075</span>
+      </div>
+    </div>
+
+    <div class="footer-initiative">
+      An initiative of Little Lavenders Montessori School
+    </div>
+  </footer>
+
+  <div class="landing-copyright">
+    &copy; 2026 Lavender Kids International Preschool &amp; Daycare. All Rights Reserved.
+  </div>
+
+  <!-- FLOATING LAVENDER PETALS ENGINE -->
+  <script>
+    (function () {
+      const canvas = document.getElementById('petalsCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+      let dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      function resize() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      // Mouse interactive breeze
+      const mouse = { x: -1000, y: -1000, vx: 0, vy: 0, lastX: -1000, lastY: -1000 };
+      window.addEventListener('mousemove', function (e) {
+        mouse.vx = (e.clientX - mouse.lastX) * 0.15;
+        mouse.vy = (e.clientY - mouse.lastY) * 0.15;
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+        mouse.lastX = e.clientX;
+        mouse.lastY = e.clientY;
+      });
+      window.addEventListener('touchmove', function (e) {
+        if (e.touches.length > 0) {
+          const t = e.touches[0];
+          mouse.vx = (t.clientX - mouse.lastX) * 0.15;
+          mouse.vy = (t.clientY - mouse.lastY) * 0.15;
+          mouse.x = t.clientX;
+          mouse.y = t.clientY;
+          mouse.lastX = t.clientX;
+          mouse.lastY = t.clientY;
+        }
+      }, { passive: true });
+
+      // Lavender petal color palette
+      const palettes = [
+        { base: '#5D2E9D', mid: '#8C5CE6', tip: '#D4B8FF', vein: '#B388FF' },
+        { base: '#703DB8', mid: '#A175EE', tip: '#E4D4FF', vein: '#C4A1FF' },
+        { base: '#4E2486', mid: '#7846CE', tip: '#C7A8FF', vein: '#9C6FE6' },
+        { base: '#834BD4', mid: '#B28CF5', tip: '#F1E6FF', vein: '#D7BEFF' }
+      ];
+
+      // Number of petals based on screen size
+      const count = Math.min(Math.floor(width / 26), 55);
+      const petals = [];
+
+      function createPetal(initial = false) {
+        const palette = palettes[Math.floor(Math.random() * palettes.length)];
+        const length = 18 + Math.random() * 22; // Petal length
+        const petalWidth = length * (0.35 + Math.random() * 0.18); // Slender curve
+
+        return {
+          x: Math.random() * (width + 100) - 50,
+          y: initial ? Math.random() * height : -40 - Math.random() * 50,
+          w: petalWidth,
+          l: length,
+          speedY: 0.65 + Math.random() * 0.95,
+          speedX: -0.35 + Math.random() * 0.7,
+          sway: Math.random() * Math.PI * 2,
+          swaySpeed: 0.015 + Math.random() * 0.02,
+          swayAmp: 0.5 + Math.random() * 0.8,
+          rot: Math.random() * Math.PI * 2,
+          rotSpeed: (Math.random() - 0.5) * 0.022,
+          pitch: Math.random() * Math.PI * 2, // 3D tumble flip
+          pitchSpeed: 0.02 + Math.random() * 0.035,
+          opacity: 0.5 + Math.random() * 0.45,
+          palette: palette,
+          extraVx: 0,
+          extraVy: 0
+        };
+      }
+
+      for (let i = 0; i < count; i++) {
+        petals.push(createPetal(true));
+      }
+
+      function drawPetal(p) {
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rot);
+
+        // 3D tumble projection (flip across X axis)
+        const scaleY = Math.cos(p.pitch);
+        ctx.scale(1, scaleY);
+
+        ctx.globalAlpha = p.opacity;
+
+        // Petal gradient fill
+        const grad = ctx.createLinearGradient(0, p.l / 2, 0, -p.l / 2);
+        grad.addColorStop(0, p.palette.base);
+        grad.addColorStop(0.55, p.palette.mid);
+        grad.addColorStop(1, p.palette.tip);
+
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        // Delicate curved lavender petal path
+        ctx.moveTo(0, p.l / 2);
+        ctx.bezierCurveTo(p.w * 0.85, p.l * 0.25, p.w, -p.l * 0.2, 0, -p.l / 2);
+        ctx.bezierCurveTo(-p.w, -p.l * 0.2, -p.w * 0.85, p.l * 0.25, 0, p.l / 2);
+        ctx.closePath();
+        ctx.fill();
+
+        // Subtle translucent center vein
+        ctx.strokeStyle = p.palette.vein;
+        ctx.lineWidth = 0.8;
+        ctx.beginPath();
+        ctx.moveTo(0, p.l * 0.35);
+        ctx.quadraticCurveTo(p.w * 0.1, 0, 0, -p.l * 0.35);
+        ctx.stroke();
+
+        ctx.restore();
+      }
+
+      function loop() {
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < petals.length; i++) {
+          const p = petals[i];
+
+          // Swaying breeze harmonic motion
+          p.sway += p.swaySpeed;
+          p.rot += p.rotSpeed;
+          p.pitch += p.pitchSpeed;
+
+          // Velocity updates
+          p.y += p.speedY + p.extraVy;
+          p.x += Math.sin(p.sway) * p.swayAmp + p.speedX + p.extraVx;
+
+          // Dampen cursor push
+          p.extraVx *= 0.94;
+          p.extraVy *= 0.94;
+
+          // Interactive breeze repulsion
+          const dx = p.x - mouse.x;
+          const dy = p.y - mouse.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < 110 && dist > 0) {
+            const force = (110 - dist) / 110;
+            p.extraVx += (dx / dist) * force * 1.5 + mouse.vx * 0.15;
+            p.extraVy += (dy / dist) * force * 1.5 + mouse.vy * 0.15;
+          }
+
+          // Respawn at top once past screen bounds
+          if (p.y > height + 50) {
+            petals[i] = createPetal(false);
+          }
+          if (p.x < -60) p.x = width + 50;
+          if (p.x > width + 60) p.x = -50;
+
+          drawPetal(p);
+        }
+
+        requestAnimationFrame(loop);
+      }
+
+      requestAnimationFrame(loop);
+    })();
+  </script>
+</body>
+
+</html>

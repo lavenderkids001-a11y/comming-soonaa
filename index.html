@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | Lavender Kids International Preschool &amp; Daycare</title>
+  <meta name="description"
+    content="Lavender Kids International Preschool & Daycare is coming soon. Register early for exclusive inaugural privileges and discounts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Quicksand:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --lav-deep: #3A1F6E;
+      --lav-primary: #7544C8;
+      --lav-light: #B496EE;
+      --lav-tint: #F4ECFF;
+      --lav-bg: #FAF7FE;
+      --amber: #FFAA00;
+      --amber-soft: #FFF5E0;
+      --coral: #FF5277;
+      --sage: #288C75;
+      --dark: #150B26;
+      --text-primary: #291B3E;
+      --text-secondary: #63537D;
+      --text-muted: #8E80A6;
+      --white: #FFFFFF;
+      --border-card: #E3D6F6;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      color: var(--text-primary);
+      background: radial-gradient(circle at 50% 8%, rgba(133, 84, 222, 0.14) 0%, transparent 65%),
+        linear-gradient(180deg, #FFFFFF 0%, #FAF7FE 50%, #F3ECFF 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      font-weight: 600;
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+      padding: 28px 16px 44px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Baloo 2', cursive;
+      color: var(--dark);
+      line-height: 1.15;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    .icon-svg {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+
+    /* CENTERED MINIMAL CONTAINER */
+    .minimal-container {
+      width: 100%;
+      max-width: 480px;
+      margin: auto 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* BRAND HEADER */
+    .brand-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+
+    .brand-text-wrap {
+      text-align: center;
+    }
+
+    .brand-name {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--lav-deep);
+      line-height: 1.05;
+    }
+
+    .brand-tagline {
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    /* HEADLINE & SUBHEAD */
+    .main-headline {
+      font-size: clamp(1.42rem, 5.2vw, 1.85rem);
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .main-headline .highlight-purple {
+      color: var(--lav-primary);
+    }
+
+    .main-headline .highlight-amber {
+      color: var(--amber);
+    }
+
+    .subhead {
+      font-size: clamp(0.88rem, 3.2vw, 0.96rem);
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+      line-height: 1.5;
+      max-width: 440px;
+    }
+
+    .highlight-discount {
+      color: var(--lav-primary);
+      font-weight: 700;
+    }
+
+    /* MINIMAL CARD & FORM */
+    .card-minimal {
+      width: 100%;
+      background: var(--white);
+      border: 1.5px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 24px 22px;
+      box-shadow: 0 12px 32px -6px rgba(58, 31, 110, 0.1);
+      text-align: left;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    .input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-wrap .input-icon {
+      position: absolute;
+      left: 14px;
+      color: var(--text-muted);
+      pointer-events: none;
+      width: 16px;
+      height: 16px;
+    }
+
+    .form-input,
+    .form-select {
+      width: 100%;
+      padding: 12px 14px 12px 42px;
+      border: 1.5px solid var(--border-card);
+      border-radius: var(--radius-md);
+      background: var(--lav-bg);
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark);
+      transition: all 0.2s;
+      min-height: 48px;
+    }
+
+    .form-select {
+      padding-left: 14px;
+      cursor: pointer;
+    }
+
+    .form-input:focus,
+    .form-select:focus {
+      outline: none;
+      background: var(--white);
+      border-color: var(--lav-primary);
+      box-shadow: 0 0 0 3px rgba(117, 68, 200, 0.15);
+    }
+
+    /* FORM ACTION BUTTONS */
+    .form-btn-row {
+      display: flex;
+      gap: 10px;
+      align-items: stretch;
+      margin-top: 16px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      flex: 1.25;
+      min-height: 48px;
+      padding: 12px 16px;
+      background: var(--amber);
+      color: var(--dark);
+      border: 2px solid #000;
+      box-shadow: 2.5px 2.5px 0 #000;
+      border-radius: var(--radius-pill);
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.05rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .btn-submit:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 4px 4px 0 #000;
+      background: #FFB726;
+    }
+
+    .btn-submit:active {
+      transform: translate(1px, 1px);
+      box-shadow: 1px 1px 0 #000;
+    }
+
+    .btn-call-now {
+      flex: 0.95;
+      min-height: 48px;
+      padding: 12px 14px;
+      background: #FFFFFF;
+      color: var(--lav-deep);
+      border: 2px solid #000;
+      box-shadow: 2.5px 2.5px 0 #000;
+      border-radius: var(--radius-pill);
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.05rem;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      white-space: nowrap;
+    }
+
+    .btn-call-now:hover {
+      background: var(--lav-tint);
+      transform: translate(-2px, -2px);
+      box-shadow: 4px 4px 0 #000;
+      color: var(--lav-primary);
+    }
+
+    .btn-call-now:active {
+      transform: translate(1px, 1px);
+      box-shadow: 1px 1px 0 #000;
+    }
+
+    .form-note {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+      font-weight: 600;
+    }
+
+    /* SUCCESS STATE */
+    .success-view {
+      display: none;
+      text-align: center;
+      padding: 16px 8px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.96);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .success-icon {
+      width: 48px;
+      height: 48px;
+      background: #E3F6F1;
+      color: var(--sage);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+      border: 2px solid var(--sage);
+    }
+
+    /* CAMPUS INFO & HELPLINE CARD BELOW FORM */
+    .footer-contact-card {
+      width: 100%;
+      max-width: 480px;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1.5px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      text-align: center;
+      box-shadow: 0 4px 16px -2px rgba(58, 31, 110, 0.05);
+    }
+
+    .footer-hotline {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--lav-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .footer-hotline a {
+      color: var(--lav-primary);
+      font-size: 1.35rem;
+      font-weight: 800;
+      font-family: 'Baloo 2', cursive;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: all 0.2s ease;
+      display: inline-block;
+    }
+
+    .footer-hotline a:hover {
+      color: var(--lav-deep);
+      transform: scale(1.04);
+    }
+
+    .footer-address {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 6px;
+      text-align: center;
+    }
+
+    .footer-qr-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 10px auto 4px;
+      padding: 10px 14px;
+      background: var(--lav-tint);
+      border: 1.5px solid var(--border-card);
+      border-radius: var(--radius-md);
+      max-width: 380px;
+      width: 100%;
+    }
+
+    .footer-qr-link {
+      display: inline-block;
+      background: var(--white);
+      padding: 6px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-card);
+      box-shadow: 0 2px 8px rgba(58, 31, 110, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .footer-qr-link:hover {
+      transform: scale(1.04);
+      box-shadow: 0 4px 12px rgba(117, 68, 200, 0.2);
+    }
+
+    .footer-qr-img {
+      width: 78px;
+      height: 78px;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .footer-qr-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      gap: 6px;
+    }
+
+    .footer-qr-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.3;
+    }
+
+    .footer-maps-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--lav-primary);
+      color: var(--white) !important;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
+      text-decoration: none !important;
+      box-shadow: 0 2px 8px rgba(117, 68, 200, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .footer-maps-btn:hover {
+      background: var(--lav-deep);
+      transform: translateY(-1px);
+    }
+
+    /* RESPONSIVE MOBILE TWEAKS */
+    @media (max-width: 480px) {
+      body {
+        padding: 20px 14px max(32px, env(safe-area-inset-bottom));
+      }
+
+      .card-minimal {
+        padding: 20px 16px;
+        border-radius: 16px;
+      }
+
+      .form-btn-row {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .btn-submit,
+      .btn-call-now {
+        width: 100%;
+        flex: none;
+        min-height: 48px;
+        font-size: 1.02rem;
+      }
+
+      .footer-hotline {
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 6px;
+        font-size: 0.94rem;
+      }
+
+      .footer-hotline a {
+        font-size: 1.25rem;
+      }
+
+      .footer-qr-block {
+        gap: 10px;
+        padding: 10px 12px;
+      }
+
+      .footer-qr-img {
+        width: 68px;
+        height: 68px;
+      }
+
+      .footer-address {
+        font-size: 0.76rem;
+      }
+    }
+
+    .privacy-link-btn {
+      background: none;
+      border: none;
+      padding: 0;
+      font: inherit;
+      color: var(--lav-primary);
+      font-weight: 700;
+      text-decoration: underline;
+      cursor: pointer;
+      display: inline;
+    }
+
+    .privacy-link-btn:hover {
+      color: var(--lav-deep);
+    }
+
+    /* PRIVACY MODAL BACKDROP & CARD */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(21, 11, 38, 0.65);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .modal-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1.5px solid var(--border-card);
+      width: 100%;
+      max-width: 500px;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 48px rgba(30, 15, 60, 0.25);
+      animation: modalSlideUp 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+      text-align: left;
+    }
+
+    @keyframes modalSlideUp {
+      from {
+        transform: translateY(20px) scale(0.97);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+    }
+
+    .modal-header {
+      padding: 16px 20px;
+      border-bottom: 1.5px solid var(--lav-tint);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--lav-bg);
+    }
+
+    .modal-title-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .modal-title-group h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--lav-deep);
+      margin: 0;
+    }
+
+    .modal-close-btn {
+      background: transparent;
+      border: none;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .modal-close-btn:hover {
+      background: var(--lav-tint);
+      color: var(--dark);
+    }
+
+    .modal-body {
+      padding: 20px;
+      overflow-y: auto;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .modal-body p {
+      margin-bottom: 12px;
+    }
+
+    .modal-body h4 {
+      font-size: 0.95rem;
+      color: var(--dark);
+      margin: 14px 0 6px;
+      font-family: inherit;
+      font-weight: 700;
+    }
+
+    .modal-body ul {
+      margin-left: 20px;
+      margin-top: 4px;
+      margin-bottom: 12px;
+    }
+
+    .modal-body li {
+      margin-bottom: 4px;
+    }
+
+    .modal-footer {
+      padding: 14px 20px;
+      border-top: 1.5px solid var(--lav-tint);
+      background: var(--lav-bg);
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .modal-btn-accept {
+      background: var(--lav-primary);
+      color: var(--white);
+      border: none;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      font-family: 'Baloo 2', cursive;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .modal-btn-accept:hover {
+      background: var(--lav-deep);
+    }
+
+    .modal-btn-dismiss {
+      background: var(--white);
+      color: var(--text-secondary);
+      border: 1.5px solid var(--border-card);
+      padding: 10px 16px;
+      border-radius: var(--radius-pill);
+      font-family: 'Baloo 2', cursive;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .modal-btn-dismiss:hover {
+      background: var(--lav-tint);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= SVG ICONS ================= -->
+  <svg style="display:none;" aria-hidden="true">
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+      <path
+        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </symbol>
+    <symbol id="icon-user" viewBox="0 0 24 24">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+      <circle cx="12" cy="7" r="4" />
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24">
+      <polyline points="20 6 9 17 4 12" />
+    </symbol>
+    <symbol id="icon-sparkles" viewBox="0 0 24 24">
+      <path
+        d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+      <circle cx="12" cy="10" r="3" />
+    </symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+    </symbol>
+  </svg>
+
+  <!-- ================= MAIN CENTERED STAGE ================= -->
+  <div class="minimal-container">
+
+    <!-- BRAND HEADER -->
+    <header class="brand-header">
+      <div class="brand-text-wrap">
+        <div class="brand-name">Lavender Kids</div>
+        <div class="brand-tagline">International Preschool &amp; Daycare</div>
+      </div>
+    </header>
+
+    <h1 class="main-headline">
+      Coming Soon<br>
+      Something <span class="highlight-purple">beautiful</span> is blooming for <span class="highlight-amber">little
+        minds.</span>
+    </h1>
+
+    <p class="subhead">
+      Register early to unlock exclusive inaugural privileges, private campus tours and a
+      <span class="highlight-discount">special inaugural discount</span>.
+    </p>
+
+    <!-- MINIMAL EARLY REGISTRATION FORM CARD -->
+    <div class="card-minimal">
+
+      <div id="formSection">
+        <form id="earlyRegForm">
+          <!-- Parent Name -->
+          <div class="form-group">
+            <label class="form-label" for="parentName">Parent's Full Name *</label>
+            <div class="input-wrap">
+              <svg class="input-icon icon-svg">
+                <use href="#icon-user" />
+              </svg>
+              <input type="text" id="parentName" class="form-input" placeholder="e.g. Priya Sharma" required>
+            </div>
+          </div>
+
+          <!-- Phone / WhatsApp -->
+          <div class="form-group">
+            <label class="form-label" for="phoneNum">Phone / WhatsApp Number *</label>
+            <div class="input-wrap">
+              <svg class="input-icon icon-svg">
+                <use href="#icon-phone" />
+              </svg>
+              <input type="tel" id="phoneNum" class="form-input" placeholder="+91 63649 XXXXX" required>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="emailAddr">Email Address *</label>
+            <div class="input-wrap">
+              <svg class="input-icon icon-svg">
+                <use href="#icon-mail" />
+              </svg>
+              <input type="email" id="emailAddr" class="form-input" placeholder="priya@example.com" required>
+            </div>
+          </div>
+
+          <!-- Program of Interest -->
+          <div class="form-group">
+            <label class="form-label" for="progSelect">Child's Program / Age *</label>
+            <select id="progSelect" class="form-select" required>
+              <option value="" disabled selected>Select Program...</option>
+              <option value="Toddlers (15 Months)">Toddlers (15 Months)</option>
+              <option value="Playgroup (2 Years)">Playgroup (2 Years)</option>
+              <option value="Nursery (3 Years)">Nursery (3 Years)</option>
+              <option value="LKG (4 Years)">LKG (4 Years)</option>
+              <option value="UKG (5 Years)">UKG (5 Years)</option>
+              <option value="DayCare (Full Day)">DayCare (Full Day)</option>
+              <option value="After School Day Care (6–10 Years)">After School Day Care (6–10 Years)</option>
+            </select>
+          </div>
+
+          <!-- Privacy Policy Consent -->
+          <div class="form-checkbox-group" style="display:flex;align-items:center;gap:8px;margin:10px 0 4px;">
+            <input type="checkbox" id="privacyConsent" required
+              style="width:17px;height:17px;accent-color:var(--lav-primary);cursor:pointer;flex-shrink:0;">
+            <label for="privacyConsent"
+              style="font-size:0.8rem;color:var(--text-secondary);cursor:pointer;line-height:1.3;">
+              I agree to the <button type="button" id="openPrivacyModal" class="privacy-link-btn">Privacy
+                Policy</button> &amp; consent to updates
+            </label>
+          </div>
+
+          <div class="form-btn-row">
+            <button type="submit" id="submitBtn" class="btn-submit">
+              <span>Get Discount</span>
+              <svg class="icon-svg">
+                <use href="#icon-sparkles" />
+              </svg>
+            </button>
+            <a href="tel:+916364952223" class="btn-call-now" aria-label="Call Admissions Helpline">
+              <svg class="icon-svg">
+                <use href="#icon-phone" />
+              </svg>
+              <span>Call Now</span>
+            </a>
+          </div>
+        </form>
+      </div>
+
+      <!-- SUCCESS CONFIRMATION STATE -->
+      <div id="successSection" class="success-view">
+        <div class="success-icon">
+          <svg class="icon-svg" style="width:26px;height:26px;">
+            <use href="#icon-check" />
+          </svg>
+        </div>
+        <h3 style="font-size:1.4rem;color:var(--lav-deep);">Thank You for Registering!</h3>
+        <p style="color:var(--text-secondary);font-size:0.96rem;margin-top:8px;line-height:1.5;">
+          Our admissions team will get back to you shortly.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ================= FOOTER RIGHT BELOW THE FORM ================= -->
+    <footer class="footer-contact-card">
+      <div class="footer-hotline">
+        <svg class="icon-svg" style="color:var(--lav-primary);width:20px;height:20px;">
+          <use href="#icon-phone" />
+        </svg>
+        <span>Admissions Helpline:</span>
+        <a href="tel:+916364952223">+91 63649 52223</a>
+      </div>
+      <div class="footer-address">
+        <svg class="icon-svg" style="color:var(--lav-primary);margin-top:2px;">
+          <use href="#icon-pin" />
+        </svg>
+        <span>Ground Floor, Shivagiri Complex, Kaggadasapura Main Rd, near SCT College of Education, Kondappa Layout,
+          Vignan Nagar, Doddanekkundi, Bengaluru, Karnataka 560075</span>
+      </div>
+      <!-- GOOGLE MAPS QR CODE -->
+      <div class="footer-qr-block">
+        <a href="https://maps.app.goo.gl/hFzm5kGAwDMjukNg6" target="_blank" rel="noopener noreferrer"
+          class="footer-qr-link" title="Open campus in Google Maps">
+          <img src="./assets/images/maps_qr.png" alt="Google Maps QR Code" class="footer-qr-img">
+        </a>
+        <div class="footer-qr-text">
+          <span class="footer-qr-label">Scan or tap to visit campus on Google Maps</span>
+          <a href="https://maps.app.goo.gl/hFzm5kGAwDMjukNg6" target="_blank" rel="noopener noreferrer"
+            class="footer-maps-btn">
+            <span>Open in Maps</span>
+            <svg class="icon-svg" style="width:13px;height:13px;">
+              <use href="#icon-pin" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div style="font-size:0.84rem;font-weight:700;color:var(--lav-deep);margin-top:10px;text-align:center;">
+        An initiative of Little Lavenders Montessori School
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ================= PRIVACY POLICY MODAL ================= -->
+  <div id="privacyModal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-labelledby="privacyTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <svg class="icon-svg" style="color:var(--lav-primary);width:22px;height:22px;">
+            <use href="#icon-shield" />
+          </svg>
+          <h3 id="privacyTitle">Privacy Policy</h3>
+        </div>
+        <button type="button" class="modal-close-btn" id="closePrivacyModal" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Lavender Kids International Preschool &amp; Daycare</strong> is dedicated to protecting the privacy
+          and personal information of families inquiring about or enrolling in our programs.</p>
+
+        <h4>1. Information We Collect</h4>
+        <p>When you complete the early registration form or request inaugural privileges, we collect:</p>
+        <ul>
+          <li>Parent / Guardian full name</li>
+          <li>Mobile &amp; WhatsApp contact number</li>
+          <li>Email address</li>
+          <li>Child's program / age group of interest</li>
+        </ul>
+
+        <h4>2. Purpose of Collection</h4>
+        <p>We use this information exclusively to:</p>
+        <ul>
+          <li>Issue and reserve your exclusive 35% inaugural tuition discount voucher</li>
+          <li>Coordinate your personal campus walkthrough and meet-the-educators session</li>
+          <li>Provide curriculum and enrollment timeline updates via WhatsApp, phone, or email</li>
+        </ul>
+
+        <h4>3. Zero Spam &amp; Confidentiality</h4>
+        <p>We respect your time and privacy. Your contact details will never be sold, leased, or distributed to
+          third-party marketing companies.</p>
+
+        <h4>4. Contact &amp; Opt-Out</h4>
+        <p>If you wish to update your details or opt out of admissions messages, contact our campus helpline directly:
+        </p>
+        <p>📞 <strong>+91 63649 52223</strong><br>
+          📍 Ground Floor, Shivagiri Complex, Kaggadasapura Main Rd, Vignan Nagar, Bengaluru 560075</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="modal-btn-dismiss" id="dismissPrivacyModal">Close</button>
+        <button type="button" class="modal-btn-accept" id="acceptPrivacyModal">I Agree &amp; Check Box</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SCRIPT ================= -->
+  <script>
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz69v0lEQjJcNoP6RSH7Nn0XXAiKQ8dfKGoQy3KLmaCfHnZE6uXrLzj2Ztva18TtxuqDg/exec';
+
+    const earlyRegForm = document.getElementById('earlyRegForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formSection = document.getElementById('formSection');
+    const successSection = document.getElementById('successSection');
+
+    // Privacy Modal Elements
+    const privacyModal = document.getElementById('privacyModal');
+    const openPrivacyModal = document.getElementById('openPrivacyModal');
+    const closePrivacyModal = document.getElementById('closePrivacyModal');
+    const dismissPrivacyModal = document.getElementById('dismissPrivacyModal');
+    const acceptPrivacyModal = document.getElementById('acceptPrivacyModal');
+    const privacyConsent = document.getElementById('privacyConsent');
+
+    function openModal() {
+      if (privacyModal) {
+        privacyModal.classList.add('open');
+        privacyModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeModal() {
+      if (privacyModal) {
+        privacyModal.classList.remove('open');
+        privacyModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    }
+
+    if (openPrivacyModal) {
+      openPrivacyModal.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        openModal();
+      });
+    }
+
+    if (closePrivacyModal) {
+      closePrivacyModal.addEventListener('click', closeModal);
+    }
+
+    if (dismissPrivacyModal) {
+      dismissPrivacyModal.addEventListener('click', closeModal);
+    }
+
+    if (acceptPrivacyModal) {
+      acceptPrivacyModal.addEventListener('click', function () {
+        if (privacyConsent) {
+          privacyConsent.checked = true;
+        }
+        closeModal();
+      });
+    }
+
+    if (privacyModal) {
+      privacyModal.addEventListener('click', function (e) {
+        if (e.target === privacyModal) {
+          closeModal();
+        }
+      });
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && privacyModal && privacyModal.classList.contains('open')) {
+        closeModal();
+      }
+    });
+
+    if (earlyRegForm) {
+      earlyRegForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById('parentName').value.trim();
+        const phone = document.getElementById('phoneNum').value.trim();
+        const email = document.getElementById('emailAddr').value.trim();
+        const program = document.getElementById('progSelect').value;
+        const consent = privacyConsent && privacyConsent.checked ? 'Yes' : 'Yes';
+        const randomCode = 'INAUGURAL-35-LAV' + Math.floor(1000 + Math.random() * 9000);
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerText = 'Submitting...';
+        }
+
+        // Send submission to Google Sheets
+        if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL.trim() !== '') {
+          const payload = {
+            parentName: name,
+            phone: phone,
+            email: email,
+            program: program,
+            privacyConsent: consent,
+            source: 'Coming Soon Page',
+            _t: Date.now()
+          };
+
+          const params = new URLSearchParams(payload);
+          const fullUrl = GOOGLE_SCRIPT_URL + '?' + params.toString();
+
+          // Dual-guaranteed delivery (bypasses browser redirects & ad blockers)
+          try {
+            fetch(fullUrl, { method: 'GET', mode: 'no-cors', keepalive: true }).catch(function () { });
+          } catch (err) { }
+
+          try {
+            const beacon = new Image();
+            beacon.src = fullUrl;
+          } catch (err) { }
+        }
+
+        setTimeout(function () {
+          formSection.style.display = 'none';
+          successSection.style.display = 'block';
+        }, 300);
+      });
+    }
+  </script>
+
+</body>
+
+</html>
